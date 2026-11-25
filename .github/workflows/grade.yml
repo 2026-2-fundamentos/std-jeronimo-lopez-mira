@@ -53,7 +53,6 @@ jobs:
           from datetime import datetime, timezone
           from pathlib import Path
 
-
           # -----------------------------------------------------
           # Directories
           # -----------------------------------------------------
@@ -64,7 +63,6 @@ jobs:
 
           grading_directory.mkdir(exist_ok=True)
           logs_directory.mkdir(exist_ok=True)
-
 
           # -----------------------------------------------------
           # Activity discovery
@@ -82,7 +80,6 @@ jobs:
               ),
               key=lambda directory: directory.name,
           )
-
 
           # -----------------------------------------------------
           # Activity grading
@@ -142,7 +139,6 @@ jobs:
                   "log": f"logs/{activity.name}.txt",
               }
 
-
           # -----------------------------------------------------
           # Consolidated result
           # -----------------------------------------------------
@@ -175,7 +171,6 @@ jobs:
               json.dumps(grading_result, indent=2),
               encoding="utf-8",
           )
-
 
           # -----------------------------------------------------
           # GitHub Actions summary
@@ -215,7 +210,6 @@ jobs:
                       f"of {total_count} activities**\n"
                   )
 
-
           # -----------------------------------------------------
           # Console result
           # -----------------------------------------------------
@@ -252,7 +246,6 @@ jobs:
           import sys
 
           from pathlib import Path
-
 
           result_file = Path("grading/grading-results.json")
 
