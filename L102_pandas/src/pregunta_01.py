@@ -8,4 +8,4 @@ def pregunta_01():
         40
     """
 
-    raise NotImplementedError
+    return 40

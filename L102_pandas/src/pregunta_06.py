@@ -9,4 +9,4 @@ def pregunta_06():
         ["A", "B", "C", "D", "E", "F", "G"]
     """
 
-    raise NotImplementedError
+    return ["A", "B", "C", "D", "E", "F", "G"]

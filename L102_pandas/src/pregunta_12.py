@@ -15,4 +15,14 @@ def pregunta_12():
         ...
     """
 
-    raise NotImplementedError
+    import pandas as pd
+
+    df = pd.read_csv("data/tbl2.tsv", sep="\t")
+    df["c5"] = df["c5a"].astype(str) + ":" + df["c5b"].astype(str)
+
+    return (
+        df.groupby("c0", as_index=False)["c5"]
+        .agg(lambda values: ",".join(sorted(values)))
+        .sort_values("c0")
+        .reset_index(drop=True)
+    )
